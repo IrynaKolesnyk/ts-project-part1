@@ -1,0 +1,158 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('./fonts/Roboto-Regular.ttf') format('truetype')
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+ul {
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+// container
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-image: url(./images/autumn.jpg);
+    backdrop-filter: blur(8px);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    filter: blur(8px);
+
+    &.rain {
+        background-image: url(./images/rainy-bg.jpg);
+    };
+
+    &.summer {
+        background-image: url(./images/summer-bg.jpg);
+    }
+
+    &.winter {
+        background-image: url(./images/winter-bg.jpg);
+    }
+}
+
+// title
+
+.title {
+    font-size: 45px;
+    margin: 50px 0;
+    text-align: center;
+    color: #ee7235;
+}
+
+// list
+
+.soundsList {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+li {
+    width: 150px;
+    height: 150px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid #ffff;
+    border-radius: 20px;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    cursor: pointer;
+}
+
+li:not(:last-child) {
+    margin-right: 20px;
+}
+
+.rainItem { 
+    background-image: url(./images/rainy-bg.jpg);
+
+    &.play {
+        .rainIcon {
+            background-image: url(../src/icons/pause.svg);
+        }
+    }
+}
+
+.summerItem {
+    background-image: url(./images/summer-bg.jpg);
+
+    &.play {
+        .summerIcon {
+            background-image: url(../src/icons/pause.svg);
+        }
+    }
+}
+
+.winterItem {
+    background-image: url(./images/winter-bg.jpg);
+
+    &.play {
+        .winterIcon {
+            background-image: url(../src/icons/pause.svg);
+        }
+    }
+}
+
+// icons
+
+.icon {
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.rainIcon {
+    background-image: url(../src/icons/cloud-rain.svg);
+}
+
+.summerIcon{ 
+    background-image: url(../src/icons/sun.svg);
+}
+
+.winterIcon { 
+    background-image: url(../src/icons/cloud-snow.svg);
+}
+
+.volume {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+

@@ -1,0 +1,20 @@
+{
+  "extends": [
+     "eslint:recommended"
+  ],
+  "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true
+  },
+  "rules": {
+    "semi": [2, "always"],
+    "no-param-reassign": "off",
+    "no-void": "off",
+    "no-nested-ternary": "off"
+  }
+}
