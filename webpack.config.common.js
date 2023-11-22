@@ -53,7 +53,7 @@ module.exports = {
       },
       {
         test: /\.mp3$/,
-        loader: "file-loader",
+        type: "asset/resource",
       },
       { test: /\.([cm]?ts|tsx)$/, loader: "ts-loader" },
     ],

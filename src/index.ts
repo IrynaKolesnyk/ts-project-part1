@@ -1,6 +1,6 @@
 import soundRain from './sounds/rain.mp3';
-import soundSummer from './sounds/rain.mp3';
-import soundWinter from './sounds/rain.mp3';
+import soundSummer from './sounds/summer.mp3';
+import soundWinter from './sounds/winter.mp3';
 
 import "./index.scss";
 
@@ -49,15 +49,6 @@ function playPauseSong(name: string) {
       items[i].classList.remove("play");
     }
   }
-
-  // audio.play().then(function() {
-  //   // Automatic playback started!
-  // }).catch(function (error) {
-  //   console.log(error)
-  //   console.log(soundRain)
-  //   // Automatic playback failed.
-  //   // Show a UI element to let the user manually start playback.
-  // });
 
   audio.play();
 }
